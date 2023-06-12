@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+html{
+   
+    font-family: 'Bebas Neue', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+
+}
+.lista li a {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+.lista .cursor {
+     position: fixed;
+     width: 20px;
+     height: 20px;
+     background: #fff;
+     border-radius: 50%;
+     transform: translate(-50%,-50%);
+     pointer-events: none;
+     mix-blend-mode: difference;
+
+}
+
+.lista li{
+    margin: 10px 0;
+    padding: 0 15px;
+    width: max-content;
+}   
+
+
+.lista li:hover ~ .cursor {
+    transform:translate(-50%,-50%) scale(3);
+    background:#000;
+    box-shadow: 0 0 0 100vh #fff;
+}

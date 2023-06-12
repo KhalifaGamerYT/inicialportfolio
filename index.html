@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pagina Inicial portfolio </title>
+    <link rel="stylesheet" type="text/css" href="style.css"
+</head>
+<body>
+    
+    <ul class="lista">
+        <li><a href="#">início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Portfólio</a></li>
+        <li><a href="#">Contato</a></li>
+        <div class="cursor"></div>
+    </ul>
+    <script>
+        let cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (event) => {
+            cursor.style.left = event.pageX + 'px';
+            cursor.style.top = event.pageY + 'px';
+        })
+    </script>
+</body>
+</html>
